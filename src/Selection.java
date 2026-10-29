@@ -14,9 +14,6 @@ public class Selection {
             arr[index] = arr[j];
             arr[j] = curr;
         }
-        for(T print:arr){
-            System.out.println(print);
-        }
     }
 
     public static <T extends Comparable<T>> void sort(ArrayList<T> arr){
@@ -32,9 +29,6 @@ public class Selection {
             arr.set(index,arr.get(j));
             arr.set(j, curr);
         }
-        for(T print:arr){
-            System.out.println(print);
-        }
     }
 
     public static void main(String[] args){
@@ -45,6 +39,12 @@ public class Selection {
         String[] arr2 = {"b","a","z","zebra","abel","big","large","hamburger","not ham","small"};
         sort(arr);
         sort(arr2);
+        for( int i = 0; i<10; i++) {
+            System.out.println(arr[i]);
+        }
+        for( int i = 0; i<10; i++) {
+            System.out.println(arr2[i]);
+        }
         ArrayList<Integer> arr3 = new ArrayList<>();
         for(int i = 9; i>=0; i--){
             arr3.add(i);
@@ -62,6 +62,12 @@ public class Selection {
         arr4.add("small");
         sort(arr3);
         sort(arr4);
+        for( int i = 0; i<10; i++) {
+            System.out.println(arr3.get(i));
+        }
+        for( int i = 0; i<10; i++) {
+            System.out.println(arr4.get(i));
+        }
 
     }
 }
