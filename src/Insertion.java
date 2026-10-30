@@ -4,12 +4,15 @@ public class Insertion {
     public static <T extends Comparable<T>> void sort(T[]arr){
         for(int j = 1; j<arr.length; j++){
             T temp = arr[j];
-            for(int i = j; i>=-1;i--){
-                if(i>=0&&temp.compareTo(arr[i])>0){
+            for(int i = j-1; i>=-1;i--){
+                if(i>=0&&temp.compareTo(arr[i])<0){
                     arr[i+1] = arr[i];
-                }else{
-                    arr[i] = temp;
+                }else if(i!=-1){
+                    arr[i+1] = temp;
                     break;
+                }else{
+                 arr[0]=temp;
+                 break;
                 }
             }
         }
@@ -18,12 +21,14 @@ public class Insertion {
     public static <T extends Comparable<T>> void sort(ArrayList<T> arr){
         for(int j = 1; j<arr.size(); j++){
             T temp = arr.get(j);
-            for(int i = j; i>=-1;i--){
-                if(i>=0&&temp.compareTo(arr.get(i))>0){
+            for(int i = j-1; i>=-1;i--){
+                if(i>=0&&temp.compareTo(arr.get(i))<0){
                     arr.set(i+1, arr.get(i));
-                }else{
-                    arr.set(i,temp);
+                }else if(i!=-1){
+                    arr.set(i+1,temp);
                     break;
+                }else{
+                    arr.set(0,temp);
                 }
             }
         }
