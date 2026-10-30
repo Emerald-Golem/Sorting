@@ -12,7 +12,6 @@ public class Insertion {
                     break;
                 }else{
                  arr[0]=temp;
-                 break;
                 }
             }
         }
